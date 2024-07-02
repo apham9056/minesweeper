@@ -1,11 +1,11 @@
-Cell = {flag = false, num = 0, exposed = false}
+Cell = {bomb = false, num = 0, exposed = false}
+Cell.__index = Cell
 
 function Cell:new ()
-    setm
 
+    local self = setmetatable({}, Cell)
+    self.bomb = false
+
+    return self
 end
-
-
-
-
-
+ 
